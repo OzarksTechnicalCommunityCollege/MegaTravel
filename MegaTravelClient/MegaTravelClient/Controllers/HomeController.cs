@@ -117,7 +117,7 @@ namespace MegaTravelClient.Controllers
                         var strSerializedData = JsonConvert.SerializeObject(userData);
                         Console.WriteLine(strSerializedData);
                         ServiceHelper objService = new ServiceHelper();
-                        string response = await objService.PostRequest(strSerializedData, ConstantValues.LoginAPI, false, string.Empty).ConfigureAwait(true);
+                        string response = await objService.PostRequest(strSerializedData, ConstantValues.LoginUser, false, string.Empty).ConfigureAwait(true);
                         ResponseModel = JsonConvert.DeserializeObject<LoginResponseModel>(response);
                         if (ResponseModel == null)
                         {
@@ -126,8 +126,9 @@ namespace MegaTravelClient.Controllers
                         }
                         else if (ResponseModel.Status == false)
                         {
-                            //an error occured, what happened?  Needs handled
-
+                            //did not log in. Maybe a wrong username or password
+                            ViewBag.ErrorMessage = "Email or Password Incorrect";
+                            return View("Views/Home/Login.cshtml");
                         }
                         else
                         {
@@ -171,7 +172,10 @@ namespace MegaTravelClient.Controllers
                         }
                         else if (ResponseModel.Status == false)
                         {
-                            //an error occured, what happened?  Needs handled
+                            //did not log in. Maybe a wrong username or password
+                            ViewBag.ErrorMessage = "Email or Password Incorrect";
+                            return View("Views/Home/Login.cshtml");
+
 
                         }
                         else

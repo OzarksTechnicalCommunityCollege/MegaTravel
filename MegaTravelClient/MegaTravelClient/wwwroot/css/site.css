@@ -17,6 +17,10 @@ label {
     padding: 5px;
 }
 
+.error{
+    color:red;
+}
+
 .product-cards {
     margin-bottom: 30px;
 }
