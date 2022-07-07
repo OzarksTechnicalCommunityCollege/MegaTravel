@@ -1,0 +1,44 @@
+﻿@using MegaTravelClient.Models
+@model LoginResponseModel
+@{
+    ViewData["Title"] = "User Dashboard";
+}
+
+  <section class="intro">
+    <h1>User Dashboard</h1>
+    <h4>Welcome @Model.Data.FirstName</h4> 
+  </section>
+  <section>
+      <h4>Your profile data</h4>
+      <table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Data.FirstName</td>
+            <td>@Model.Data.LastName</td>
+            <td>@Model.Data.Email</td>
+            <td>@Model.Data.Phone</td>
+            <td>@Model.Data.Street1</td>
+            <td>@Model.Data.Street2</td>
+            <td>@Model.Data.City</td>
+            <td>@Model.Data.State</td>
+            <td>@Model.Data.ZipCode</td>
+        </tr>
+
+</tbody>
+</table>
+  </section>
+
+  <section>
+      <h4>Book a Trip</h4>
+  </section>
+
+

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "v+/rvZxeJSomFwahFMDK9Oncccf+M75gxvYCIrPwTMFO6yqSc+ns2RpN+JBBLUqhtmlkBfNAcvXaYOT+DB/lyw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelClient\\MegaTravelClient\\MegaTravelClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhysm\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

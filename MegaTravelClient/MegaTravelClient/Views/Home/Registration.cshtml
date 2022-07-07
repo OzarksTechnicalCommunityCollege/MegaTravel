@@ -1,0 +1,41 @@
+﻿@using MegaTravelClient.Models
+@model RegistrationModel
+@{
+    ViewData["Title"] = "User Registration";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Complete this form to create a new user account. </p>
+<div class="regForm">
+    <form asp-action="ProcessForm" method="post">
+        <label for="FirstName">First Name: </label>
+        <input asp-for="FirstName" /> <br />
+        <label for="LastName">Last Name: </label>
+        <input asp-for="LastName" /><br />
+        <label for="Email">Email: </label>
+        <input asp-for="Email" /><br />
+        <label for="Phone Number">Phone: </label>
+        <input asp-for="Phone" /><br />
+        <p></p>
+        <h4>Mailing Information</h4>
+        <label for="Street Address">Street Address: </label>
+        <input asp-for="Street1" /><br />
+        <label for="Address Line 2">Address Line 2: </label>
+        <input asp-for="Street2" /><br />
+        <label for="City">City: </label>
+        <input asp-for="City" /><br />
+        <label for="State">State: </label>
+        <input asp-for="State" /><br />
+        <label for="Zip Code">ZipCode: </label>
+        <input asp-for="ZipCode" /><br />
+        <p></p>
+        <h4>Login Information</h4>
+        <label for="Username">Username: </label>
+        <input asp-for="Username" /><br />
+        <label for="Password">Password: </label>
+        <input asp-for="Password" /><br />
+        <input asp-for="UserType" value="User" /><br />
+        <p></p>
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</div>

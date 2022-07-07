@@ -1,0 +1,21 @@
+﻿@using MegaTravelClient.Models
+@model LoginModel
+@{
+    ViewData["Title"] = "User Login";
+}<h2>User Login</h2>
+    <form asp-action="ProcessLogin" method="post">
+         <table>
+            <tr>
+                <td><label for="UserName"><b>Username</b></label></td>
+                <td><input type="text" placeholder="Enter Username" name="username" id="username" required></td>
+            </tr>
+            <tr>
+                <td><label for="Password"><b>Password</b></label></td>
+                <td><input type="password" placeholder="Enter Password" name="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" value="Submit">Login</button></td>
+            </tr>
+        </table>
+     </form>
