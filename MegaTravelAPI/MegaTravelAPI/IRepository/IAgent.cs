@@ -13,10 +13,23 @@ namespace MegaTravelAPI.IRepository
         Task<LoginResponse> LoginAgent(LoginModel tokenData);
 
         /// <summary>
-        /// Finds the user data for a user based on username
+        /// Finds the user data for an agent based on username
         /// </summary>
         /// <param name="tokenData"></param>
         /// <returns></returns>
         Task<MegaTravelAPI.Data.Agent> FindByName(string username);
+
+        /// <summary>
+        /// Gets all trips in the database
+        /// </summary>
+        /// <returns></returns>
+        List<TripData> GetAllTrips();
+
+        /// <summary>
+        /// Finds the user data for an agent based on agentID
+        /// </summary>
+        /// <param name="agentID"></param>
+        /// <returns></returns>
+        Task<Agent> FindByID(int agentID);
     }
 }

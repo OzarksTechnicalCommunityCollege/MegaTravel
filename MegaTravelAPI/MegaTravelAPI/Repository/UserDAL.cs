@@ -26,7 +26,7 @@ namespace MegaTravelAPI.Data
         /// Method that retrieves all users in the database
         /// </summary>
         /// <returns></returns>
-        public async Task<List<User>> GetAllUsers()
+        public List<User> GetAllUsers()
         {
             List<User> userList = new List<User>();
 

@@ -182,8 +182,6 @@ namespace MegaTravelClient.Controllers
                         {
                             //everything is OK
                             //the agent should now be considered authenticated
-
-
                             //Take the agent to the Agent Dashboard
                             return View("Views/Agent/Index.cshtml", ResponseModel);
                         }

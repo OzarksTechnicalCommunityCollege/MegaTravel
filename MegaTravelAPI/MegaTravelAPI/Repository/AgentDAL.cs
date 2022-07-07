@@ -104,7 +104,91 @@ namespace MegaTravelAPI.Data
         }
         #endregion
 
+        #region Find Agent By AgentID Method
+        public async Task<Agent> FindByID(int agentID)
+        {
+            Agent agent = null;
 
+            try
+            {
+                if (agentID != null)
+                {
+                    //query the database to find the agent who has this username
+                    var query = context.Agents
+                        .Where(x => x.LoginInfo.Id == agentID)
+                        .FirstOrDefault<Agent>();
+
+                    if (query != null)
+                    {
+                        //set up the object so we can return it
+                        agent = new Agent
+                        {
+                            AgentId = query.AgentId,
+                            FirstName = query.FirstName,
+                            LastName = query.LastName,
+                            OfficeLocation = query.OfficeLocation,
+                            Phone = query.Phone
+
+                        };
+                    }
+
+                }
+
+                return agent;
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("FindByName --- " + ex.Message);
+            }
+
+            return agent;
+        }
+            #endregion
+
+
+        /// <summary>
+        /// Method to get all trips in the database
+        /// </summary>
+        /// <returns></returns>
+        #region Get All Trips Method
+        public List<TripData> GetAllTrips()
+        {
+            List<TripData> tripList = new List<TripData>();
+
+            try
+            {
+                //query the database to get all of the trips
+                var trips = context.Trips.ToList();
+
+                foreach(Trip trip in trips)
+                {
+                    //get all of the object data to send back
+                    tripList.Add(new TripData()
+                    {
+
+                        TripID = trip.TripId,
+                        TripName = trip.TripName,
+                        Location = trip.Location,
+                        StartDate = trip.StartDate,
+                        EndDate = trip.EndDate,
+                        NumAdults = trip.NumAdults,
+                        NumChildren = trip.NumChildren
+                    });
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("GetAllTrips --- " + ex.Message);
+                throw;
+            }
+
+            return tripList;
+        }
+        #endregion
 
     }
 }

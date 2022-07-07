@@ -43,7 +43,7 @@ namespace MegaTravelAPI.Controllers
             List<User> userList = new List<User>();
             try
             {
-                userList = await repository.GetAllUsers().ConfigureAwait(true);
+                userList = repository.GetAllUsers();
 
                 //check the list isn't empty
                 if(userList.Count != 0)

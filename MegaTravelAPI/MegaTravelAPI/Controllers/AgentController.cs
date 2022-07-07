@@ -95,6 +95,45 @@ namespace MegaTravelAPI.Controllers
             return response;
         }
 
+        [HttpPost("GetAllTrips", Name = "GetAllTrips")]
+        [AllowAnonymous]
+        public async Task<GetTripsResponseModel> GetTrips()
+        {
+            GetTripsResponseModel response = new GetTripsResponseModel();
+
+            //set up a list to hold the list of trips we will get back from the database
+            List<TripData> tripList = new List<TripData>();
+            try
+            {
+                tripList = repository.GetAllTrips();
+
+                //check the list isn't empty
+                if (tripList.Count != 0)
+                {
+                    response.Status = true;
+                    response.StatusCode = 200;
+                    response.tripList = tripList;
+                }
+                else
+                {
+                    //there has been an error
+                    response.Status = false;
+                    response.Message = "Get Failed";
+                    response.StatusCode = 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Status = false;
+                response.Message = "Get Failed";
+                response.StatusCode = 0;
+                //there has been an error
+                Console.WriteLine(ex.Message);
+            }
+            return response;
+        }
+
         /// <summary>
         /// generate the token for registration
         /// </summary>

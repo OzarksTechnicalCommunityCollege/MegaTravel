@@ -1,6 +1,6 @@
 ﻿namespace MegaTravelAPI
 {
-    public class Trip
+    public class TripData
     {
         public int TripID { get; set; }
         public string TripName {  get; set; } = string.Empty;

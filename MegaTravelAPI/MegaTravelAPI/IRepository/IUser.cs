@@ -10,7 +10,7 @@ namespace MegaTravelAPI.IRepository
         /// Returns a list of all registered users
         /// </summary>
         /// <returns></returns>
-        Task<List<User>> GetAllUsers();
+        List<User> GetAllUsers();
 
         /// <summary>
         /// Saves a new user who has registered
