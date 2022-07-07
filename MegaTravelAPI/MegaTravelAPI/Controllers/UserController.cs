@@ -26,9 +26,10 @@ namespace MegaTravelAPI.Controllers
 
         public UserController(IConfiguration Config)
         {
-            context = new MegaTravelContext();
-            repository = new UserDAL(context);
             config = Config;
+            context = new MegaTravelContext(config);
+            repository = new UserDAL(context, config);
+            
 
         }
 

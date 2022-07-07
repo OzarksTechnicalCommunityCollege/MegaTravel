@@ -26,9 +26,10 @@ namespace MegaTravelAPI.Controllers
 
         public AgentController(IConfiguration Config)
         {
-            context = new MegaTravelContext();
-            repository = new AgentDAL(context);
             config = Config;
+            context = new MegaTravelContext(config);
+            repository = new AgentDAL(context);
+            
 
         }
 

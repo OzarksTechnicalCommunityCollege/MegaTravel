@@ -13,9 +13,12 @@ namespace MegaTravelAPI.Data
         //context for the database connection
         private readonly MegaTravelContext context;
 
-        public UserDAL(MegaTravelContext Context)
+        private readonly IConfiguration _config;
+
+        public UserDAL(MegaTravelContext Context, IConfiguration config)
         {
             context = Context;
+            _config = config;
         }
 
         #region Get All Users Method
@@ -114,7 +117,7 @@ namespace MegaTravelAPI.Data
                 objApplicationUser.UserId = highestID + 1;
 
                 //save this user in the database
-                using(var db = new MegaTravelContext())
+                using(var db = new MegaTravelContext(_config))
                 {
                     db.Users.Add(objApplicationUser);
                     db.SaveChanges();

@@ -1,4 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
+var databaseConnectionString = builder.Configuration["MegaTravel:DatabaseConnectionString"];
 
 // Add services to the container.
 

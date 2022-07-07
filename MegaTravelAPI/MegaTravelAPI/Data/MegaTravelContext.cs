@@ -8,13 +8,17 @@ namespace MegaTravelAPI.Data
 {
     public partial class MegaTravelContext : DbContext
     {
-        public MegaTravelContext()
+        private readonly IConfiguration _config;
+        public MegaTravelContext(IConfiguration config)
         {
+            _config = config;
+
         }
 
-        public MegaTravelContext(DbContextOptions<MegaTravelContext> options)
+        public MegaTravelContext(DbContextOptions<MegaTravelContext> options, IConfiguration config)
             : base(options)
         {
+            _config = config;
         }
 
         public virtual DbSet<Agent> Agents { get; set; } = null!;
@@ -26,9 +30,9 @@ namespace MegaTravelAPI.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
+                var databaseConnectionString = _config["MegaTravel:DatabaseConnectionString"];
+                optionsBuilder.UseSqlServer(databaseConnectionString);
 
-                optionsBuilder.UseSqlServer("Data Source=cis-db.ckwia8qkgyyj.us-east-1.rds.amazonaws.com;Initial Catalog=MegaTravel;Persist Security Info=True;User ID=fordt;Password=Qwerty123$");
-                
             }
         }
 
