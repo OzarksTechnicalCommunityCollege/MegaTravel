@@ -28,6 +28,9 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "user",
         pattern: "{controller=User}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(
+        name: "agent",
+        pattern: "{controller=Agent}/{action=Index}/{id?}");
 });
 
 app.MapRazorPages();

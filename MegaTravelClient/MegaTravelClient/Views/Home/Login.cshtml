@@ -17,5 +17,17 @@
                 <td></td>
                 <td><button type="submit" value="Submit">Login</button></td>
             </tr>
+            <tr><td><p></p></td></tr>
+            <tr>
+                <td></td>
+                <td>Log in as:
+                    @Html.DropDownList("UserType", new List<SelectListItem>
+                    {
+                        new SelectListItem{ Text = "User", Value = "User"},
+                        new SelectListItem{ Text = "Agent", Value = "Agent"},
+
+                    })
+                </td>
+            </tr>
         </table>
      </form>

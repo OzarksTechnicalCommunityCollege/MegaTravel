@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MegaTravel.Pages
 {
-    public class UserDashboardModel : PageModel
+    public class AgentDashboardModel : PageModel
     {
-        private readonly ILogger<UserDashboardModel> _logger;
+        private readonly ILogger<AgentDashboardModel> _logger;
 
-        public UserDashboardModel(ILogger<UserDashboardModel> logger)
+        public AgentDashboardModel(ILogger<AgentDashboardModel> logger)
         {
             _logger = logger;
         }

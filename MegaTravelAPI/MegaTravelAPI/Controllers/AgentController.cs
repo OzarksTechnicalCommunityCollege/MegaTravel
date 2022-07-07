@@ -86,7 +86,7 @@ namespace MegaTravelAPI.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("LoginAgemt --- " + ex.Message);
+                Console.WriteLine("LoginAgent --- " + ex.Message);
                 response.StatusCode = 500;
                 response.Status = false;
                 response.Message = "Login Failed";
