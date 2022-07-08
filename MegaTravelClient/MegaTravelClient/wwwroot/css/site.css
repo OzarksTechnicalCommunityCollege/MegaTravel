@@ -25,6 +25,10 @@ label {
     margin-bottom: 30px;
 }
 
+.dashboardLinks{
+    background-color:lightgray;
+}
+
 nav {
     margin-top: 20px;
     background: black;

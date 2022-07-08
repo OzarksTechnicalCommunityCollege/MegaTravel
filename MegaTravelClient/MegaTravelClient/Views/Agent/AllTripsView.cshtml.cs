@@ -10,6 +10,7 @@ namespace MegaTravel.Pages
         public AllTripsViewModel(ILogger<AllTripsViewModel> logger)
         {
             _logger = logger;
+
         }
 
         public void OnGet()
