@@ -3,6 +3,7 @@
  
  ## The Client
  The MegaTravel website is an ASP.NET Core web application which contains various functions for a mock travel agency. It is designed in the MVC pattern.
+ An overview of functionality as well as design documentation can be found on the Mirobord - https://miro.com/app/board/uXjVOtGsEig=/
  
  ## The API
  The API is written in .NET 6.0 using ASP.NET Core and the MVC pattern. This RESTful HTTP webservice delivers the functionality necessary to run the sample application and interface with the database.
