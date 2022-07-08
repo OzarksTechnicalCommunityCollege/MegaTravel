@@ -29,10 +29,16 @@ namespace MegaTravelAPI.Controllers
             config = Config;
             context = new MegaTravelContext(config);
             repository = new AgentDAL(context);
-            
+
 
         }
 
+        #region Login Agent
+        /// <summary>
+        /// Method to log in an agent for authentication
+        /// </summary>
+        /// <param name="tokenData"></param>
+        /// <returns></returns>
         [HttpPost("LoginAgent", Name = "LoginAgent")]
         [AllowAnonymous]
         public async Task<LoginResponse> LoginUser(LoginModel tokenData)
@@ -64,7 +70,7 @@ namespace MegaTravelAPI.Controllers
                             response.Authtoken = tokenString;
                             response.AgentData = new AgentData
                             {
-                               
+
                                 AgentID = agent.AgentId,
                                 FirstName = agent.FirstName,
                                 LastName = agent.LastName,
@@ -94,8 +100,14 @@ namespace MegaTravelAPI.Controllers
 
             return response;
         }
+        #endregion
 
-        [HttpPost("GetAllTrips", Name = "GetAllTrips")]
+        #region Get All Trips
+        /// <summary>
+        /// Method to return all trips from the database
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetAllTrips", Name = "GetAllTrips")]
         [AllowAnonymous]
         public async Task<GetTripsResponseModel> GetTrips()
         {
@@ -133,7 +145,55 @@ namespace MegaTravelAPI.Controllers
             }
             return response;
         }
+        #endregion
 
+        #region Get All Trips For Agent
+        /// <summary>
+        /// Method that returns all trips for a particular agent
+        /// </summary>
+        /// <param name="agentID"></param>
+        /// <returns></returns>
+        [HttpGet("GetAllTripsForAgent", Name = "GetAllTripsForAgent")]
+        [AllowAnonymous]
+        public async Task<GetTripsResponseModel> GetAllTripsForAgent(int agentID)
+        {
+            GetTripsResponseModel response = new GetTripsResponseModel();
+
+            //set up a list to hold the list of trips we will get back from the database
+            List<TripData> tripList = new List<TripData>();
+            try
+            {
+                tripList = repository.GetAllTripsForAgent(agentID);
+
+                //check the list isn't empty
+                if (tripList.Count != 0)
+                {
+                    response.Status = true;
+                    response.StatusCode = 200;
+                    response.tripList = tripList;
+                }
+                else
+                {
+                    //there has been an error
+                    response.Status = false;
+                    response.Message = "Get Failed";
+                    response.StatusCode = 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Status = false;
+                response.Message = "Get Failed";
+                response.StatusCode = 0;
+                //there has been an error
+                Console.WriteLine(ex.Message);
+            }
+            return response;
+        }
+        #endregion
+
+        #region Generate JWT Token
         /// <summary>
         /// generate the token for registration
         /// </summary>
@@ -156,5 +216,6 @@ namespace MegaTravelAPI.Controllers
                 signingCredentials: credentials);
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+        #endregion
     }
 }

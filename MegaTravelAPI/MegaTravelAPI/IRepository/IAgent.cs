@@ -26,10 +26,17 @@ namespace MegaTravelAPI.IRepository
         List<TripData> GetAllTrips();
 
         /// <summary>
-        /// Finds the user data for an agent based on agentID
+        /// Finds the agent based on agentID
         /// </summary>
         /// <param name="agentID"></param>
         /// <returns></returns>
         Task<Agent> FindByID(int agentID);
+
+        /// <summary>
+        /// Method that returns all trips for a particular agent
+        /// </summary>
+        /// <param name="agentID"></param>
+        /// <returns></returns>
+        List<TripData> GetAllTripsForAgent(int agentID);
     }
 }

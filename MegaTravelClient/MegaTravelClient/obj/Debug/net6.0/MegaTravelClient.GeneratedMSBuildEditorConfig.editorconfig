@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/Users/rhysm/source/repos/MegaTravel/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Agent/AllTripsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRcQWxsVHJpcHNWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/rhysm/source/repos/MegaTravel/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Agent/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

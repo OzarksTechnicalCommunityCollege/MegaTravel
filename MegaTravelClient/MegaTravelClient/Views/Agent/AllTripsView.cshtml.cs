@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MegaTravel.Pages
 {
-    public class AgentDashboardModel : PageModel
+    public class AllTripsViewModel : PageModel
     {
-        private readonly ILogger<AgentDashboardModel> _logger;
+        private readonly ILogger<AllTripsViewModel> _logger;
 
-        public AgentDashboardModel(ILogger<AgentDashboardModel> logger)
+        public AllTripsViewModel(ILogger<AllTripsViewModel> logger)
         {
             _logger = logger;
         }
 
         public void OnGet()
         {
-            
+
         }
     }
 }

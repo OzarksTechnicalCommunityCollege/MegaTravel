@@ -1,0 +1,40 @@
+﻿@using MegaTravelClient.Models
+@model GetTripsResponseModel
+@{
+    ViewData["Title"] = "Booked Trips";
+}
+
+  <section class="intro">
+    <h1>Booked Trips</h1>
+  </section>
+
+ <section>
+     <table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>TripName</th>
+            <th>Location</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Number of Adults</th>
+            <th>Number of Children</th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var trip in Model.tripList)
+{
+        <tr>
+            <td>@trip.TripName</td>
+            <td>@trip.Location</td>
+            <td>@trip.StartDate</td>
+            <td>@trip.EndDate</td>
+            <td>@trip.NumAdults</td>
+            <td>@trip.NumChildren</td>
+        </tr>
+}  
+</tbody>
+</table>
+ </section>
+
+

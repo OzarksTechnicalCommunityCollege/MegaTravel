@@ -1,6 +1,5 @@
-﻿using MegaTravelAPI.Data;
-
-namespace MegaTravelAPI.Models
+﻿
+namespace MegaTravelClient.Models
 {
     public class GetTripsResponseModel
     {

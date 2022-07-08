@@ -1,9 +1,7 @@
-﻿namespace MegaTravelAPI
+﻿namespace MegaTravelClient.Models
 {
     public class TripData
     {
-        public int UserID { get; set; }
-        public int AgentID { get; set; }
         public int TripID { get; set; }
         public string TripName {  get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;

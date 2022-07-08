@@ -215,8 +215,8 @@ C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\bi
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\scopedcss\bundle\MegaTravelAPI.styles.css
-C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\MegaTravelAPI.csproj.CopyComplete
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\MegaTravelAPI.dll
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\ref\MegaTravelAPI.dll
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\MegaTravelAPI.pdb
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\MegaTravelAPI.genruntimeconfig.cache
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelAPI\MegaTravelAPI\obj\Debug\net6.0\MegaTravelAPI.csproj.AssemblyReference.cache

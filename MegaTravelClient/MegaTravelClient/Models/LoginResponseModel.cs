@@ -12,5 +12,6 @@
         public User Data { get; set; } = null;
 
         public Agent AgentData { get; set; } = null;
+
     }
 }
