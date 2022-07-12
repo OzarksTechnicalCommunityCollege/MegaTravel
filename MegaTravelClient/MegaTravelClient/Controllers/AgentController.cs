@@ -12,6 +12,7 @@ namespace MegaTravelClient.Controllers
             return View();
         }
 
+
         public async Task<IActionResult> AllTripsView([FromQuery(Name = "agentID")] int agentID)
         {
 
