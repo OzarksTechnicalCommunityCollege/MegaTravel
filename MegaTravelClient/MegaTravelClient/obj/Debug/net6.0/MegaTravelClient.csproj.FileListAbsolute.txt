@@ -54,3 +54,11 @@ C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelCli
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\scopedcss\bundle\MegaTravelClient.styles.css
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\scopedcss\projectbundle\MegaTravelClient.bundle.scp.css
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.genruntimeconfig.cache
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
