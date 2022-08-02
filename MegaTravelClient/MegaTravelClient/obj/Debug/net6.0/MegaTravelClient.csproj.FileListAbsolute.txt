@@ -26,7 +26,6 @@ C:\Users\rhysm\source\repos\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\r
 C:\Users\rhysm\source\repos\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.pdb
 C:\Users\rhysm\source\repos\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.genruntimeconfig.cache
 C:\Users\rhysm\source\repos\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.GlobalUsings.g.cs
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.csproj.AssemblyReference.cache
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.AssemblyInfoInputs.cache
@@ -45,7 +44,6 @@ C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelCli
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\MegaTravelClient.deps.json
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\MegaTravelClient.runtimeconfig.json
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\MegaTravelClient.dll
-C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\ref\MegaTravelClient.dll
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\MegaTravelClient.pdb
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\staticwebassets.build.json
@@ -62,3 +60,5 @@ C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelCli
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.csproj.CopyComplete
+C:\Users\rhysm\source\repos\MegaTravel\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\refint\MegaTravelClient.dll
