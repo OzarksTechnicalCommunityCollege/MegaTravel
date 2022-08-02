@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGuAACDUlxl6FpwtZeqjBOufL3gkDQFQ/0oOxnMiFxZy6RjeaRYvGBmvuEra0fQSrEMmnK6jEybCO1YqdBvVAA==",
+  "dgSpecHash": "zt/OVd4ojkVAm6vsvVLVmmVbCSqmoa7mjF2a6FG+zABlIPQNmKYFkQj/9fZFlj0h7S0OBzFTQGfv8VGxWcbsOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\swashbuckle.aspnetcore\\6.1.5\\swashbuckle.aspnetcore.6.1.5.nupkg.sha512",
