@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MegaTravelClient.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class AgentController : Controller
     {
         public IActionResult Index(LoginResponseModel userData)

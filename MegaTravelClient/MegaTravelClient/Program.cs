@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Net;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,8 +45,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
                 // we can write our own custom response content here
                 await context.HttpContext.Response.WriteAsync("Token Validation Has Failed. Request Access Denied");
             }
+
         }
      };
+
+
 });
 
 
@@ -60,6 +64,17 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseStatusCodePages(context =>
+{
+    var response = context.HttpContext.Response;
+
+    if (response.StatusCode == (int)HttpStatusCode.Unauthorized ||
+        response.StatusCode == (int)HttpStatusCode.Forbidden)
+    {
+        response.Redirect("/Home/Login");
+    }
+    return Task.CompletedTask;
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -80,6 +95,7 @@ app.UseEndpoints(endpoints =>
         name: "agent",
         pattern: "{controller=Agent}/{action=Index}/{id?}");
 });
+
 
 app.MapRazorPages();
 
