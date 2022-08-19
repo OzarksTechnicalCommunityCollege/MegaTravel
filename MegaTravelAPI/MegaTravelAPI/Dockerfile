@@ -6,11 +6,9 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
+#WORKDIR /src
 COPY ./MegaTravelAPI/MegaTravelAPI.csproj ./MegaTravelAPI/
-#COPY ./MegaTravelAPI/MegaTravelAPI.sln MegaTravelAPI/
 RUN dotnet restore ./MegaTravelAPI/MegaTravelAPI.csproj
-#RUN dotnet restore
 COPY . .
 #WORKDIR "MegaTravelAPI"
 RUN dotnet build ./MegaTravelAPI/MegaTravelAPI.csproj -c Release -o /app/build
