@@ -12,7 +12,7 @@ COPY ["./MegaTravelAPI.csproj", "MegaTravelAPI/"]
 RUN dotnet restore
 COPY . .
 #WORKDIR "MegaTravelAPI"
-RUN dotnet build "./MegaTravelAPI/MegaTravelAPI.csproj" -c Release -o /app/build
+RUN dotnet build "/MegaTravelAPI/MegaTravelAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "MegaTravelAPI.csproj" -c Release -o /app/publish
