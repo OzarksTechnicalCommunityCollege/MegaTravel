@@ -27,8 +27,7 @@ jobs:
 
     - name: Build with dotnet
       run: |  
-        ls
-        ls -a
+        dir
         dotnet build --configuration Release
 
     - name: Configure AWS credentials
@@ -49,8 +48,8 @@ jobs:
         ECR_REPOSITORY: "maegatravelapi"
         IMAGE_TAG: "latest"
       run: |
-        ls
-        ls -a
+        # ls
+        # ls -a
         cd MegaTravelAPI/MegaTravelAPI
         # Build a docker container and push it to ECR 
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
