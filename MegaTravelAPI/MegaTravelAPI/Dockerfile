@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["./MegaTravelAPI.csproj", "MegaTravelAPI/"]
 RUN dotnet restore "MegaTravelAPI/MegaTravelAPI.csproj"
 COPY . .
-WORKDIR "/src/MegaTravelAPI"
+WORKDIR "/app/src/MegaTravelAPI"
 RUN dotnet build "MegaTravelAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
