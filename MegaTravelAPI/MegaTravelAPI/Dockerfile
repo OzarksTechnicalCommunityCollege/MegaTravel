@@ -15,7 +15,7 @@ RUN dotnet build ./MegaTravelAPI/MegaTravelAPI.csproj -c Release -o /build/
 WORKDIR /build
 
 FROM build AS publish
-RUN dotnet publish "MegaTravelAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish ./MegaTravelAPI/MegaTravelAPI.csproj -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
