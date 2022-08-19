@@ -24,7 +24,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
+        aws-region: us-east-1
 
     - name: Login to Amazon ECR
       id: login-ecr
@@ -37,6 +37,9 @@ jobs:
         ECR_REPOSITORY: "maegatravelapi"
         IMAGE_TAG: "latest"
       run: |
+        ls
+        ls -a
+        cd MegaTravelAPI/MegaTravelAPI
         # Build a docker container and push it to ECR 
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         echo "Pushing image to ECR..."
@@ -54,8 +57,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 464485023635.dkr.ecr.us-east-1.amazonaws.com
-          docker pull 464485023635.dkr.ecr.us-east-1.amazonaws.com/maegatravelapi:latest
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 464485023635.dkr.ecr.us-east-1.amazonaws.com          docker pull 464485023635.dkr.ecr.us-east-1.amazonaws.com/maegatravelapi:latest
           #Stop container
           docker stop demoapp          
           #Remove all untagged images
