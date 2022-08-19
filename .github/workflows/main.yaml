@@ -9,15 +9,19 @@ name: Deployment of MegaTravelAPI
 jobs:
   deploy:
     name: Deploy
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
 
     steps:
     - name: Install Octopus CLI
       uses: OctopusDeploy/install-octopus-cli-action@v1.1.1
       with:
           version: latest
+          
     - name: Checkout
       uses: actions/checkout@v2
+
+    - name: Build
+      run: dotnet build
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
