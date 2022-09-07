@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pdpKRKAXp3sfOMhXyizDvTN7vvyfO35Jdpj29MZhH7FQhnuCttgiyA8zn+v2qecVr6Gj5AtHHHG/J67ecskPLQ==",
+  "dgSpecHash": "wZ47NktWdTSIuVOpAQ2FzyKM2rEMh6Ex179/8nrAKONTJntvFDqW5TV9oJL4T/UqQgC+pi9NrswECj7ognigYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelClient\\MegaTravelClient\\MegaTravelClient.csproj",
+  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravelClient\\MegaTravelClient\\MegaTravelClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.7\\microsoft.aspnetcore.authentication.jwtbearer.6.0.7.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -30,7 +30,8 @@ namespace MegaTravelAPI.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                var databaseConnectionString = _config["MegaTravel:DatabaseConnectionString"];
+                //var databaseConnectionString = _config["MegaTravel:DatabaseConnectionString"];
+                var databaseConnectionString = "Server = cis-db.ckwia8qkgyyj.us-east-1.rds.amazonaws.com; Initial Catalog = MegaTravel; User Id = fordt; Password = G0dSaveTheQu33n";
                 optionsBuilder.UseSqlServer(databaseConnectionString);
 
             }
