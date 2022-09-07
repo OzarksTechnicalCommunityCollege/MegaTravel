@@ -19,6 +19,12 @@ namespace MegaTravelAPI.IRepository
         /// <returns></returns>
         Task<SaveUserResponse> SaveUserRecord(RegistrationModel usermodel);
 
+        /// <summary>
+        /// Updates an existing user
+        /// </summary>
+        /// <param name="usermodel"></param>
+        /// <returns></returns>
+        Task<SaveUserResponse> UpdateUserRecord(UserData usermodel);
 
         /// <summary>
         /// Logs in an already registered user
@@ -33,5 +39,7 @@ namespace MegaTravelAPI.IRepository
         /// <param name="tokenData"></param>
         /// <returns></returns>
         Task<UserData> FindByName(string username);
+
+
     }
 }

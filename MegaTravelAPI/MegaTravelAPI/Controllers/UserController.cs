@@ -202,6 +202,67 @@ namespace MegaTravelAPI.Controllers
             return response;
         }
 
+        [HttpPost("UpdateUser", Name = "UpdateUser")]
+        [AllowAnonymous]
+        public async Task<CreateUserResponseModel> UpdateUser(UserData userData)
+        {
+            CreateUserResponseModel response = new CreateUserResponseModel();
+
+            if (userData != null)
+            {
+                try
+                {
+                    //call the method that will save the user record
+                    var user = await repository.UpdateUserRecord(userData).ConfigureAwait(true);
+
+                    if (user.StatusCode == 200) //status success
+                    {
+                        //user has been updated
+
+                        response.Status = true;
+                        response.Message = "Update Successful";
+                        response.StatusCode = 200;
+
+                        // send back the user information we just added
+                        response.Data = new UserData();
+
+                        response.Data.UserId = user.Data.UserId;
+                        response.Data.FirstName = user.Data.FirstName;
+                        response.Data.LastName = user.Data.LastName;
+                        response.Data.Email = user.Data.Email;
+                        response.Data.Phone = user.Data.Phone;
+                        response.Data.Street1 = user.Data.Street1;
+                        response.Data.Street2 = user.Data.Street2;
+                        response.Data.City = user.Data.City;
+                        response.Data.State = user.Data.State;
+                        response.Data.ZipCode = user.Data.ZipCode;
+                        response.Data.Phone = user.Data.Phone;
+
+                    }
+                    else
+                    {
+                        //there has been an error
+                        response.Status = false;
+                        response.Message = "Update Failed";
+                        response.StatusCode = 0;
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //there has been an error
+                    response.Status = false;
+                    response.Message = "Update Failed";
+                    response.StatusCode = 0;
+                    Console.WriteLine(ex.Message);
+                }
+
+
+            }
+
+            return response;
+        }
+
         /// <summary>
         /// generate the token for registration
         /// </summary>

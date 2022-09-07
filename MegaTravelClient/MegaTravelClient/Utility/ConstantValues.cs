@@ -8,5 +8,6 @@
         public const string LoginAgent = "Agent/LoginAgent";
         public const string GetAllTrips = "Agent/GetAllTrips";
         public const string GetAllTripsForAgent = "Agent/GetAllTripsForAgent";
+        public const string UpdateUser = "User/UpdateUser";
     }
 }

@@ -36,7 +36,7 @@ namespace MegaTravelClient.Controllers
 
         public async Task<IActionResult> GetUsers()
         {
-            List<GetUsersResponseModel> userList = new List<GetUsersResponseModel>();
+            //List<GetUsersResponseModel> userList = new List<GetUsersResponseModel>();
 
             GetUsersResponseModel ResponseModel = null;
             try

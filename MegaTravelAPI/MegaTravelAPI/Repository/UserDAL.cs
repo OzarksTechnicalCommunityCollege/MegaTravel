@@ -5,6 +5,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 using System.Text;
+using System.Reflection.Emit;
 
 namespace MegaTravelAPI.Data
 {
@@ -141,6 +142,65 @@ namespace MegaTravelAPI.Data
             catch (Exception ex)
             {
                 Console.WriteLine("SaveUserRecord --- " + ex.Message);
+                res.Status = false;
+                res.StatusCode = 0;
+            }
+            return res;
+        }
+        #endregion
+
+
+
+        #region Update User Record Method
+        /// <summary>
+        /// Update an existing user record
+        /// </summary>
+        /// <param name="usermodel"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public async Task<SaveUserResponse> UpdateUserRecord(UserData usermodel)
+        {
+
+            //set up a response status object to hold the response
+            SaveUserResponse res = new SaveUserResponse();
+
+            try
+            {
+                using (var db = new MegaTravelContext(_config))
+                {
+                    //find the current user in the database
+                    var result = db.Users.SingleOrDefault(u => u.UserId == usermodel.UserId);
+
+                    if(result != null)
+                    {
+                        //update the data
+
+                        result.FirstName = usermodel.FirstName;
+                        result.LastName = usermodel.LastName;
+                        result.Email = usermodel.Email;
+                        result.Street1 = usermodel.Street1;
+                        result.Street2 = usermodel.Street2;
+                        result.City = usermodel.City;
+                        result.State = usermodel.State;
+                        result.ZipCode = usermodel.ZipCode;
+                        result.Phone = usermodel.Phone;
+                    }
+
+                    //save this user in the database
+                    db.SaveChanges();
+
+                    //set the success to pass the data back
+                    res.StatusCode = 200;
+                    res.Message = "Update Successful";
+                    res.Status = true;
+                    res.Data = result;
+                    res.UserId = result.UserId;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("UpdateUserRecord --- " + ex.Message);
                 res.Status = false;
                 res.StatusCode = 0;
             }

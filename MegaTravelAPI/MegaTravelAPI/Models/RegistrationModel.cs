@@ -3,6 +3,7 @@ namespace MegaTravelAPI.Models
 {
     public class RegistrationModel
     {
+        public int UserID { get; set; } 
 
         [Required]
         public string Email { get; set; } = null!;
