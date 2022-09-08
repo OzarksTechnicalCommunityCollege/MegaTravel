@@ -184,17 +184,23 @@ namespace MegaTravelAPI.Data
                         result.State = usermodel.State;
                         result.ZipCode = usermodel.ZipCode;
                         result.Phone = usermodel.Phone;
+
+                        //save this user in the database
+                        db.SaveChanges();
+
+                        //set the success to pass the data back
+                        res.StatusCode = 200;
+                        res.Message = "Update Successful";
+                        res.Status = true;
+                        res.Data = result;
+                        res.UserId = result.UserId;
                     }
-
-                    //save this user in the database
-                    db.SaveChanges();
-
-                    //set the success to pass the data back
-                    res.StatusCode = 200;
-                    res.Message = "Update Successful";
-                    res.Status = true;
-                    res.Data = result;
-                    res.UserId = result.UserId;
+                    else
+                    {
+                        Console.WriteLine("UpdateUserRecord --- Update Failed");
+                        res.Status = false;
+                        res.StatusCode = 500;
+                    }
                 }
 
             }
@@ -202,7 +208,7 @@ namespace MegaTravelAPI.Data
             {
                 Console.WriteLine("UpdateUserRecord --- " + ex.Message);
                 res.Status = false;
-                res.StatusCode = 0;
+                res.StatusCode = 500;
             }
             return res;
         }

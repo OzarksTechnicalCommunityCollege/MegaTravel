@@ -244,7 +244,7 @@ namespace MegaTravelAPI.Controllers
                         //there has been an error
                         response.Status = false;
                         response.Message = "Update Failed";
-                        response.StatusCode = 0;
+                        response.StatusCode = 500;
 
                     }
                 }
@@ -253,7 +253,7 @@ namespace MegaTravelAPI.Controllers
                     //there has been an error
                     response.Status = false;
                     response.Message = "Update Failed";
-                    response.StatusCode = 0;
+                    response.StatusCode = 500;
                     Console.WriteLine(ex.Message);
                 }
 
