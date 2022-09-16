@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vcMVEz0lhwDDdXg15oxcS9c6gUtdE/tG/PJOMyLquzV8pZ4wrrlJ76YK/T+IkmIOlEbn/fnQ9ixduUVVW5EcAQ==",
+  "dgSpecHash": "7+FGHMttNtYgWe8lHVuqnvlc9pcXF7cOcZEgN+2JcCd5ZcrlH4IfuwpQ1bgapCkCHh1rSEFE93c/QLTizRWuAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
+  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhysm\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

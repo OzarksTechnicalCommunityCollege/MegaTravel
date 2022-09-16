@@ -10,5 +10,6 @@
         public int NumAdults { get; set; }
         public int NumChildren { get; set; }
 
+        public User userInfo { get; set; }
     }
 }

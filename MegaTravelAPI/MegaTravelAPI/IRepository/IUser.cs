@@ -40,6 +40,5 @@ namespace MegaTravelAPI.IRepository
         /// <returns></returns>
         Task<UserData> FindByName(string username);
 
-
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "70bxUBWK/eSqK8T2hVD62chnRekAAyv+ATn/tnYl7vwi0CkwP7GdLmTTZEE1wsi8iOdUr9lpNvZKe+4NvZMz3g==",
+  "dgSpecHash": "WRN9Ma+xBJpBvdJRffZSr7hOKKskvTTAbTzm11+8ul/EKiIqhjAfYWx0GSmM9QHJ0eOfFAc/JagaMYwaDOiqDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravelClient\\MegaTravelClient\\MegaTravelClient.csproj",
+  "projectFilePath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelClient\\MegaTravelClient\\MegaTravelClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhysm\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\rhysm\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

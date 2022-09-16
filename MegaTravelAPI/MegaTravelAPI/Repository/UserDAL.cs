@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 using System.Text;
 using System.Reflection.Emit;
+using Microsoft.Extensions.Logging;
 
 namespace MegaTravelAPI.Data
 {
@@ -148,8 +149,6 @@ namespace MegaTravelAPI.Data
             return res;
         }
         #endregion
-
-
 
         #region Update User Record Method
         /// <summary>

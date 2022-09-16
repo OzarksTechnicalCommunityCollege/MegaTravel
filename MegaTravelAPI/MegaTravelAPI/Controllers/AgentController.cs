@@ -15,8 +15,9 @@ namespace MegaTravelAPI.Controllers
     [AllowAnonymous]
     public class AgentController : ControllerBase
     {
-        // private readonly IUser repository;
+        private readonly IUser userRepository;
         private readonly IAgent repository;
+
 
         //context for the database connection
         private readonly MegaTravelContext context;
@@ -171,6 +172,7 @@ namespace MegaTravelAPI.Controllers
                     response.Status = true;
                     response.StatusCode = 200;
                     response.tripList = tripList;
+
                 }
                 else
                 {
