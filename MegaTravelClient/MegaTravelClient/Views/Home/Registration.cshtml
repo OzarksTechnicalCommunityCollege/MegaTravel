@@ -6,35 +6,56 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Complete this form to create a new user account. </p>
+
 <div class="regForm">
-    <form asp-action="ProcessForm" method="post">
+    <form asp-action="Registration" method="post">
         <label for="FirstName">First Name: </label>
         <input asp-for="FirstName" /> <br />
+        <span asp-validation-for="FirstName" class="text-danger"></span><br />
+
         <label for="LastName">Last Name: </label>
         <input asp-for="LastName" /><br />
+        <span asp-validation-for="LastName" class="text-danger"></span><br />
+
         <label for="Email">Email: </label>
         <input asp-for="Email" /><br />
+        <span asp-validation-for="Email" class="text-danger"></span><br />
+
         <label for="Phone Number">Phone: </label>
         <input asp-for="Phone" /><br />
+        <span asp-validation-for="Phone" class="text-danger"></span><br />
+
         <p></p>
         <h4>Mailing Information</h4>
         <label for="Street Address">Street Address: </label>
         <input asp-for="Street1" /><br />
+        <span asp-validation-for="Street1" class="text-danger"></span><br />
+
         <label for="Address Line 2">Address Line 2: </label>
         <input asp-for="Street2" /><br />
+
         <label for="City">City: </label>
         <input asp-for="City" /><br />
+        <span asp-validation-for="City" class="text-danger"></span><br />
+
         <label for="State">State: </label>
         <input asp-for="State" /><br />
+        <span asp-validation-for="State" class="text-danger"></span><br />
+
         <label for="Zip Code">ZipCode: </label>
         <input asp-for="ZipCode" /><br />
+        <span asp-validation-for="ZipCode" class="text-danger"></span><br />
+
         <p></p>
         <h4>Login Information</h4>
         <label for="Username">Username: </label>
         <input asp-for="Username" /><br />
+        <span asp-validation-for="Username" class="text-danger"></span><br />
+
         <label for="Password">Password: </label>
         <input asp-for="Password" /><br />
         <input asp-for="UserType" value="User" /><br />
+        <span asp-validation-for="UserType" class="text-danger"></span><br />
         <p></p>
         <button type="submit" value="Submit">Submit</button>
     </form>

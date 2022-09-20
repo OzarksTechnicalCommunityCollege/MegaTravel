@@ -14,6 +14,7 @@ namespace MegaTravelClient.Controllers
     {
         public IConfiguration _configuration;
 
+
         public HomeController(IConfiguration config)
         {
             _configuration = config;
@@ -21,6 +22,19 @@ namespace MegaTravelClient.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Registration(RegistrationModel userData)
+        {
+            //check to see if there were any errors in the model before we proceed
+            if(!ModelState.IsValid)
+            {
+                //show errors in the view
+
+            }
+
             return View();
         }
 

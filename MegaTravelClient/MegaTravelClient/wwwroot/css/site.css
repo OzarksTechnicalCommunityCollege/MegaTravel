@@ -151,6 +151,10 @@ nav {
     color: green;
 }
 
+.error{
+    color: red;
+}
+
 @media (min-width: 768px) {
     header {
         align-items: center;
