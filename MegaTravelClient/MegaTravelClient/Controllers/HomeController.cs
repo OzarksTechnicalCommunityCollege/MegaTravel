@@ -29,6 +29,28 @@ namespace MegaTravelClient.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Registration(RegistrationModel userData)
+        {
+            //check to see if there are any errors before we proceed
+            if (ModelState.IsValid)
+            {
+                ProcessForm(userData);
+                return View("Views/Home/Login.cshtml");
+            }
+            else
+            {
+                return View();
+
+            }
+            //return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();
