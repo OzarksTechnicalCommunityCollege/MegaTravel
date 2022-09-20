@@ -86,6 +86,12 @@ namespace MegaTravelClient.Controllers
             //use the userData recieved from the form to make an API call that adds
             //the new user to the database
 
+            //if the user did not put something in the street2 field, we're going to set a default value
+            if (userData.Street2 == null)
+            {
+                userData.Street2 = "string";
+            }
+
             //hash the user's password which has been collected as plain text
             string hashedPassword = Helper.EncryptCredentials(userData.Password);
 
