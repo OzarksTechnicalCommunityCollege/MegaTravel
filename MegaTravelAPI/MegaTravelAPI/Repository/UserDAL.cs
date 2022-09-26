@@ -5,6 +5,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace MegaTravelAPI.Data
 {
@@ -253,7 +254,84 @@ namespace MegaTravelAPI.Data
         }
         #endregion
 
+        #region Get All Trips By User
+        public List<Trip> GetTripsByUser(int userID)
+        {
+            //set up a list to hold the trips
+            List<Trip> tripList = new List<Trip>();
 
+            try
+            {
+                //query the database to get all of the users
+                var trips = context.Trips
+                    .Where(x => x.UserId == userID).ToList();
+
+                if(trips != null)
+                {
+                    foreach (var trip in trips)
+                    {
+                        //get the agent associated with this trip
+                        var agent = context.Agents
+                            .Where(x => x.AgentId == trip.AgentId).FirstOrDefault();
+
+                        Agent currentAgent = new Agent()
+                        {
+                            AgentId = agent.AgentId,
+                            FirstName = agent.FirstName,
+                            LastName = agent.LastName,
+                            OfficeLocation = agent.OfficeLocation,
+                            Phone = agent.Phone
+                        };
+
+                        //get the payment associated with this trip
+                        var payment = context.TripPayment
+                            .Where(x => x.TripId == trip.TripId).FirstOrDefault();
+
+                        //if there is no payment record associated with this trip
+                        //send back an empty object so we don't get a null reference
+                        TripPayment paymentStatus = new TripPayment();
+
+                        if (payment != null)
+                        {
+                            //if a payment record does exist, populate the object properties
+                            paymentStatus.PaymentId = payment.PaymentId;
+                            paymentStatus.TripId = payment.TripId;
+                            paymentStatus.PaymentStatus = payment.PaymentStatus;
+                           
+                        }
+
+                        tripList.Add(new Trip()
+                        {
+                            TripId = trip.TripId,
+                            UserId = userID,
+                            AgentId = trip.AgentId,
+                            TripName = trip.TripName,
+                            Location = trip.Location,
+                            StartDate = trip.StartDate,
+                            EndDate = trip.EndDate,
+                            NumAdults = trip.NumAdults,
+                            NumChildren = trip.NumChildren,
+                            Agent = currentAgent,
+                            PaymentStatus = paymentStatus
+                        });
+                    }
+
+                    if (tripList.Count == 0)
+                    {
+                        return null;
+                    }
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("GetTripsByUser --- " + ex.Message);
+                throw;
+            }
+
+            return tripList;
+        }
+        #endregion
 
     }
 }

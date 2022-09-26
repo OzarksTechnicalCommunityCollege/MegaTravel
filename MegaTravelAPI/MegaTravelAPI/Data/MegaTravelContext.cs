@@ -25,6 +25,7 @@ namespace MegaTravelAPI.Data
         public virtual DbSet<Login> Logins { get; set; } = null!;
         public virtual DbSet<Trip> Trips { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<TripPayment> TripPayment { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -170,6 +171,26 @@ namespace MegaTravelAPI.Data
                 entity.Property(e => e.Street2)
                     .HasMaxLength(50)
                     .IsUnicode(false);
+            });
+
+
+            modelBuilder.Entity<TripPayment>(entity =>
+            {
+                entity.ToTable("TripPayment");
+
+                entity.Property(e => e.PaymentId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("PaymentId");
+
+                entity.Property(e => e.TripId).HasColumnName("TripId");
+
+                entity.Property(e => e.PaymentStatus).HasColumnType("PaymentStatus");
+
+                entity.HasOne(d => d.tripPaid)
+                     .WithOne(p => p.PaymentStatus)
+                     .HasForeignKey<TripPayment>(d => d.PaymentId)
+                     .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_TripPayment_Trip");
             });
 
             OnModelCreatingPartial(modelBuilder);

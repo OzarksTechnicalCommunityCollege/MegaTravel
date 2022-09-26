@@ -33,5 +33,12 @@ namespace MegaTravelAPI.IRepository
         /// <param name="tokenData"></param>
         /// <returns></returns>
         Task<UserData> FindByName(string username);
+
+        /// <summary>
+        /// Method to get all trips for a specific userID
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns></returns>
+        List<Trip> GetTripsByUser(int userID);
     }
 }

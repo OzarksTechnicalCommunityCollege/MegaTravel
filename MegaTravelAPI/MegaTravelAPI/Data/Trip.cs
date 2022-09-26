@@ -14,8 +14,8 @@ namespace MegaTravelAPI.Data
         public DateTime EndDate { get; set; }
         public int NumAdults { get; set; }
         public int NumChildren { get; set; }
-
         public virtual Agent Agent { get; set; } = null!;
         public virtual User User { get; set; } = null!;
+        public virtual TripPayment PaymentStatus { get; set; } = null!;
     }
 }

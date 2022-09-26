@@ -8,6 +8,13 @@
     <h1>User Dashboard</h1>
     <h4>Welcome @Model.Data.FirstName</h4> 
   </section>
+<section class="dashboardLinks">
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="User" asp-action="AllTripsView" asp-route-agentID="@Model.UserID">View Booked Trips</a>
+        </li>
+    </ul>
+</section>
   <section>
       <h4>Your profile data</h4>
       <table class="table table-sm table-striped table-bordered m-2">

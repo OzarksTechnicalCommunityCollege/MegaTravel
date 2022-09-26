@@ -2298,24 +2298,27 @@
   },
   "packageFolders": {
     "C:\\Users\\rhysm\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rhysm\\Source\\Repos\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
+      "projectUniqueName": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
       "projectName": "MegaTravelAPI",
-      "projectPath": "C:\\Users\\rhysm\\Source\\Repos\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
+      "projectPath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\MegaTravelAPI.csproj",
       "packagesPath": "C:\\Users\\rhysm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rhysm\\Source\\Repos\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\obj\\",
+      "outputPath": "C:\\Users\\rhysm\\source\\repos\\MegaTravel\\MegaTravel\\MegaTravelAPI\\MegaTravelAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\rhysm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
