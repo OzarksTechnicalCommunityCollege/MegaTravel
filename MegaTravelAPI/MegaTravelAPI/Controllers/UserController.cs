@@ -242,6 +242,50 @@ namespace MegaTravelAPI.Controllers
             return response;
         }
 
+
+        [HttpPost("SetTripPaymentStatus", Name = "SetTripPaymentStatus")]
+        [AllowAnonymous]
+        public async Task<TripPaymentResponseModel> SetTripPaymentStatus(int tripID)
+        {
+            TripPaymentResponseModel response = new TripPaymentResponseModel();
+            try
+            {
+
+                //call the method that will check the user credentials
+                var updateResult = await repository.SetTripPaymentStatus(tripID).ConfigureAwait(true);
+
+                if (updateResult.StatusCode == 200)
+                {
+                    //payment status updated
+                    //return a response
+                    
+                    response.StatusCode = 200;
+                    response.Status = true;
+                    response.Message = "Payment Update Successful";
+                    response.trip = updateResult.trip;
+                    return response;
+                    
+                }
+                else
+                {
+                    response.StatusCode = 500;
+                    response.Status = false;
+                    response.Message = "Payment Update Failed";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("SetTripPaymentStatus --- " + ex.Message);
+                response.StatusCode = 500;
+                response.Status = false;
+                response.Message = "Payment Update Failed";
+            }
+
+            return response;
+        }
+
+
         /// <summary>
         /// generate the token for registration
         /// </summary>

@@ -333,5 +333,78 @@ namespace MegaTravelAPI.Data
         }
         #endregion
 
+        #region Set Trip Payment Status Method
+        /// <summary>
+        /// Method that sets the payment status for the trip
+        /// </summary>
+        /// <param name="tripID"></param>
+        /// <returns></returns>
+        public async Task<TripPaymentResponseModel> SetTripPaymentStatus(int tripID)
+        {
+            //set up the response
+            TripPaymentResponseModel response = new TripPaymentResponseModel();
+
+            //object to hold the trip payment object information
+            TripPayment payment = null;
+
+            try
+            {
+
+                //update this information in the database
+                using (var db = new MegaTravelContext(_config))
+                {
+                    //look for the existing record for this trip
+                    var query = db.TripPayment.Where(x => x.TripId == tripID).FirstOrDefault();
+                    Trip trip = db.Trips.Where(x => x.TripId == tripID).FirstOrDefault<Trip>();
+
+
+                    if (query != null && trip != null)
+                    {
+                        
+                        payment = new TripPayment()
+                        {
+                            TripId = query.TripId,
+                            PaymentId = query.PaymentId,
+                            PaymentStatus = true
+                        };
+
+                        //set the status to paid
+                        query.PaymentStatus = true;
+                        db.SaveChanges();
+
+                        //connect the two objects
+                        trip.PaymentStatus = payment;
+
+                        //set the success to pass the data back
+                        response.StatusCode = 200;
+                        response.Message = "Payment Status Updated";
+                        response.Status = true;
+                        response.trip = trip;
+                    }
+                    else
+                    {
+                        //the payment record for this trip doesn't exist
+                        //set the success to pass the data back
+                        response.StatusCode = 500;
+                        response.Message = "The payment record for this trip doesn't exist";
+                        response.Status = false;
+                    }
+                    
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("SetTripPaymentStatus --- " + ex.Message);
+            }
+
+            return response;
+        }
+        #endregion
+
+
+
+
     }
 }

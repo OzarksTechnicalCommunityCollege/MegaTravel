@@ -9,5 +9,6 @@
         public const string GetAllTrips = "Agent/GetAllTrips";
         public const string GetAllTripsForAgent = "Agent/GetAllTripsForAgent";
         public const string GetAllTripsByUser = "User/GetAllTripsByUser";
+        public const string SetTripPaymentStatus = "User/SetTripPaymentStatus";
     }
 }

@@ -40,5 +40,12 @@ namespace MegaTravelAPI.IRepository
         /// <param name="userID"></param>
         /// <returns></returns>
         List<Trip> GetTripsByUser(int userID);
+
+        /// <summary>
+        /// Method that sets the payment status for the trip
+        /// </summary>
+        /// <param name="tripID"></param>
+        /// <returns></returns>
+        Task<TripPaymentResponseModel> SetTripPaymentStatus(int tripID);
     }
 }
