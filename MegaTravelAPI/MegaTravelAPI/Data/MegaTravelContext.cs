@@ -186,11 +186,6 @@ namespace MegaTravelAPI.Data
 
                 entity.Property(e => e.PaymentStatus).HasColumnType("PaymentStatus");
 
-                //entity.HasOne(d => d.tripPaid)
-                //     .WithOne(p => p.PaymentStatus)
-                //     .HasForeignKey<TripPayment>(d => d.PaymentId)
-                //     .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("FK_TripPayment_Trip");
             });
 
             OnModelCreatingPartial(modelBuilder);
