@@ -43,11 +43,11 @@
                         <td>@trip.NumChildren</td>
                         @if(trip.PaymentStatus.PaymentStatus == true)
                         {
-                            <td>@trip.PaymentStatus.PaymentStatus</td>
+                            <td>Paid</td>
                         }
                         else
                         {
-                           <td>@Html.ActionLink("Mark Paid", "MarkPaymentStatus", "User", new {id = @trip.TripId, userid = @trip.UserId} )</td> 
+                           <td>@Html.ActionLink("Mark Paid", "MarkPaymentStatus", "User", new {tripID = @trip.TripId, userID = @trip.UserId} )</td> 
                         }
                         
                     </tr>
