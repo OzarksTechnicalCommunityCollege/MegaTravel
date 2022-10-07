@@ -10,5 +10,6 @@
         public const string GetAllTripsForAgent = "Agent/GetAllTripsForAgent";
         public const string GetAllTripsByUser = "User/GetAllTripsByUser";
         public const string SetTripPaymentStatus = "User/SetTripPaymentStatus";
+        public const string CancelATrip = "User/CancelATrip";
     }
 }

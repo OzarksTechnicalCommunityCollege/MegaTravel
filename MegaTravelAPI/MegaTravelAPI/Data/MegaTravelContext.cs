@@ -119,6 +119,8 @@ namespace MegaTravelAPI.Data
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
+                entity.Property(e => e.Status).HasColumnName("Status");
+
                 entity.HasOne(d => d.Agent)
                     .WithMany(p => p.Trips)
                     .HasForeignKey(d => d.AgentId)

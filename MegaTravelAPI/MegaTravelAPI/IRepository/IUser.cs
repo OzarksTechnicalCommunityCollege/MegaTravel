@@ -47,5 +47,13 @@ namespace MegaTravelAPI.IRepository
         /// <param name="tripID"></param>
         /// <returns></returns>
         Task<TripPaymentResponseModel> SetTripPaymentStatus(int tripID);
+
+        /// <summary>
+        /// Method that canceles a trip based on the tripID
+        /// </summary>
+        /// <param name="tripID"></param>
+        /// <returns></returns>
+        Task<TripPaymentResponseModel> CancelATrip(int tripID);
     }
+
 }

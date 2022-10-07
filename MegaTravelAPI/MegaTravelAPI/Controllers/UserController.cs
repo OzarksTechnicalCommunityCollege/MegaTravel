@@ -286,6 +286,44 @@ namespace MegaTravelAPI.Controllers
         }
 
 
+        [HttpPost("CancelATrip", Name = "CancelATrip")]
+        [AllowAnonymous]
+        public async Task<TripPaymentResponseModel> CancelATrip(int tripID)
+        {
+            TripPaymentResponseModel response = new TripPaymentResponseModel();
+
+            try
+            {
+                response = await repository.CancelATrip(tripID).ConfigureAwait(true);
+
+                //check the list isn't empty
+                if (response != null)
+                {
+                    response.Status = true;
+                    response.StatusCode = 200;
+                    response.Message = "Cancellation Successful";
+                }
+                else
+                {
+                    //there has been an error
+                    response.Status = false;
+                    response.Message = "Cancellation Failed";
+                    response.StatusCode = 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Status = false;
+                response.Message = "Cancellation Failed";
+                response.StatusCode = 0;
+                //there has been an error
+                Console.WriteLine(ex.Message);
+            }
+            return response;
+        }
+
+
         /// <summary>
         /// generate the token for registration
         /// </summary>

@@ -312,8 +312,9 @@ namespace MegaTravelAPI.Data
                             NumAdults = trip.NumAdults,
                             NumChildren = trip.NumChildren,
                             Agent = currentAgent,
-                            PaymentStatus = paymentStatus
-                        });
+                            PaymentStatus = paymentStatus,
+                            Status = trip.Status
+                        }); ;
                     }
 
                     if (tripList.Count == 0)
@@ -384,7 +385,6 @@ namespace MegaTravelAPI.Data
                     else
                     {
                         //the payment record for this trip doesn't exist
-                        //set the success to pass the data back
                         response.StatusCode = 500;
                         response.Message = "The payment record for this trip doesn't exist";
                         response.Status = false;
@@ -403,8 +403,56 @@ namespace MegaTravelAPI.Data
         }
         #endregion
 
+        #region Cancel a Trip Method
 
+        public async Task<TripPaymentResponseModel> CancelATrip(int tripID)
+        {
+            //set up the response
+            TripPaymentResponseModel response = new TripPaymentResponseModel();
 
+            try
+            {
+                //get the trip for this trip ID
+                using (var db = new MegaTravelContext(_config))
+                {
+                    Trip trip = db.Trips.Where(x => x.TripId == tripID).FirstOrDefault<Trip>();
+
+                    if (trip != null)
+                    {
+                        //get the trip payment information and connect the two objects
+                        TripPayment payment = db.TripPayment.Where(x => x.TripId == tripID).FirstOrDefault<TripPayment>();
+                        trip.PaymentStatus = payment;
+
+                        //set the status to false to cancel the trip
+                        trip.Status = false;
+                        db.SaveChanges();
+
+                        //set the success to pass the data back
+                        response.StatusCode = 200;
+                        response.Message = "Trip Canceled Successfully";
+                        response.Status = true;
+                        response.trip = trip;
+
+                    }
+                    else
+                    {
+                        //the record for this trip doesn't exist
+                        response.StatusCode = 500;
+                        response.Message = "The record for this trip doesn't exist";
+                        response.Status = false;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("CancelATrip --- " + ex.Message);
+                throw;
+            }
+
+            return response;
+            #endregion
+        }
 
     }
 }

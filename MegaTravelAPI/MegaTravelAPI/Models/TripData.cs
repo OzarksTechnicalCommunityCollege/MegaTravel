@@ -15,5 +15,7 @@ namespace MegaTravelAPI
         public int NumChildren { get; set; }
         public TripPayment PaymentStatus { get; set; }
 
+        public bool Status { get; set; }
+
     }
 }

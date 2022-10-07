@@ -27,31 +27,50 @@
                 <th>Number of Adults</th>
                 <th>Number of Children</th>
                 <th>Payment Status</th>
+                <th>Cancellation Status</th>
 
             </tr>
         </thead>
         <tbody>
             @foreach (var trip in Model.tripList)
             {
-                <form method="post">
-                    <tr>
-                        <td>@trip.TripName</td>
-                        <td>@trip.Location</td>
-                        <td>@trip.StartDate</td>
-                        <td>@trip.EndDate</td>
-                        <td>@trip.NumAdults</td>
-                        <td>@trip.NumChildren</td>
-                        @if(trip.PaymentStatus.PaymentStatus == true)
-                        {
-                            <td>Paid</td>
-                        }
-                        else
-                        {
-                           <td>@Html.ActionLink("Mark Paid", "MarkPaymentStatus", "User", new {tripID = @trip.TripId, userID = @trip.UserId} )</td> 
-                        }
-                        
-                    </tr>
+               <form method="post">
+                <tr>
+                    <td>@trip.TripName</td>
+                    <td>@trip.Location</td>
+                    <td>@trip.StartDate</td>
+                    <td>@trip.EndDate</td>
+                    <td>@trip.NumAdults</td>
+                    <td>@trip.NumChildren</td>
+                    @if(trip.PaymentStatus.PaymentStatus == true)
+                    {
+                        <td>Paid</td>
+                    }
+                    else if(trip.Status == false)
+                    {
+                        <td>Cancelled</td>
+                    }
+                    else
+                    {
+                        <td>@Html.ActionLink("Mark Paid", "MarkPaymentStatus", "User", new {tripID = @trip.TripId, userID = @trip.UserId} )</td> 
+                    }
+                    @if(trip.PaymentStatus.PaymentStatus == true)
+                    {
+                        <td>Cannot Cancel</td>
+                    }
+                    else if(trip.Status == false)
+                    {
+                        <td>Cancelled</td>
+                    }
+                    else
+                    {
+                        <td>@Html.ActionLink("Cancel Trip", "CancelATrip", "User", new {tripID = @trip.TripId, userID = @trip.UserId} )</td>
+                    }
+
+                </tr>
                </form>
+
+                
             }
         </tbody>
     </table>
