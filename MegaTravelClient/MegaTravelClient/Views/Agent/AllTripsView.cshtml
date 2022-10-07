@@ -26,6 +26,7 @@
             <th>End Date</th>
             <th>Number of Adults</th>
             <th>Number of Children</th>
+            <th>Payment Status</th>
 
         </tr>
     </thead>
@@ -39,7 +40,16 @@
             <td>@trip.EndDate</td>
             <td>@trip.NumAdults</td>
             <td>@trip.NumChildren</td>
+            @if(trip.PaymentStatus.PaymentStatus == true)
+            {
+               <td>Paid</td>
+            }
+            else
+            {
+                <td>Not Paid</td> 
+            }
         </tr>
+
 
 }  
 </tbody>

@@ -208,6 +208,21 @@ namespace MegaTravelAPI.Data
 
                 foreach (Trip trip in trips)
                 {
+                    //get the payment associated with this trip
+                    var payment = context.TripPayment.Where(x => x.TripId == trip.TripId).FirstOrDefault();
+
+                    //if there is no payment record associated with this trip
+                    //send back an empty object so we don't get a null reference
+                    TripPayment paymentStatus = new TripPayment();
+
+                    if (payment != null)
+                    {
+                        //if a payment record does exist, populate the object properties
+                        paymentStatus.PaymentId = payment.PaymentId;
+                        paymentStatus.TripId = payment.TripId;
+                        paymentStatus.PaymentStatus = payment.PaymentStatus;
+
+                    }
 
                     //get all of the object data to send back
                     tripList.Add(new TripData()
@@ -221,7 +236,8 @@ namespace MegaTravelAPI.Data
                         StartDate = trip.StartDate,
                         EndDate = trip.EndDate,
                         NumAdults = trip.NumAdults,
-                        NumChildren = trip.NumChildren
+                        NumChildren = trip.NumChildren,
+                        PaymentStatus = paymentStatus
 
                     });
 
