@@ -1,7 +1,9 @@
 ﻿@using MegaTravelClient.Models
+@using Newtonsoft.Json;
 @model GetTripsResponseModel
 @{
     ViewData["Title"] = "Booked Trips";
+    ViewBag.triplist = Model.tripList;
 }
 
   <section class="intro">
@@ -44,6 +46,7 @@
 }  
 </tbody>
 </table>
- </section>
+    <div>@Html.ActionLink("Download File", "DownloadTrips", "Agent")</div>
+</section>
 
 
