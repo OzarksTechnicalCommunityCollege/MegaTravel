@@ -1,8 +1,8 @@
 using MegaTravelAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-//var databaseConnectionString = builder.Configuration["MegaTravel:DatabaseConnectionString"];
-var databaseConnectionString = "cis-db.ckwia8qkgyyj.us-east-1.rds.amazonaws.com; Database = MegaTravel; User Id = fordt; Password = G0dSaveTheQu33n;";
+var databaseConnectionString = builder.Configuration["MegaTravel:DatabaseConnectionString"];
+
 
 // Add services to the container.
 
