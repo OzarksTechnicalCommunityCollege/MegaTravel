@@ -5,72 +5,73 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MegaTravelClient
 build_property.RootNamespace = MegaTravelClient
-build_property.ProjectDir = C:\Users\rhysm\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\
+build_property.ProjectDir = C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rhysm\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient
+build_property.MSBuildProjectDirectory = C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Agent/AllTripsView.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Agent/AllTripsView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRcQWxsVHJpcHNWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Agent/Index.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Agent/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Error.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/GetUsers.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/GetUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/Index.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/Login.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/ProcessForm.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/ProcessForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9jZXNzRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/Registration.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Home/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Index.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Privacy.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/User/Index.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/_ViewImports.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/_ViewStart.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rhysm/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Shared/_Layout.cshtml]
+[C:/Users/fordt/source/repos/MegaTravel/MegaTravelClient/MegaTravelClient/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k6cl2wfo3c
