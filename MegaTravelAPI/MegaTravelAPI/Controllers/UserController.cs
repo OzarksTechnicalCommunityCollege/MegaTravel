@@ -230,7 +230,6 @@ namespace MegaTravelAPI.Controllers
                         response.Data.FirstName = user.Data.FirstName;
                         response.Data.LastName = user.Data.LastName;
                         response.Data.Email = user.Data.Email;
-                        response.Data.Phone = user.Data.Phone;
                         response.Data.Street1 = user.Data.Street1;
                         response.Data.Street2 = user.Data.Street2;
                         response.Data.City = user.Data.City;
