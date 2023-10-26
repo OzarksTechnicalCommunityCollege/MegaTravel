@@ -134,3 +134,8 @@ C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Deb
 C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.pdb
 C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\MegaTravelClient.genruntimeconfig.cache
 C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\ref\MegaTravelClient.dll
+C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\staticwebassets\msbuild.MegaTravelClient.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\staticwebassets\msbuild.build.MegaTravelClient.props
+C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MegaTravelClient.props
+C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MegaTravelClient.props
+C:\Users\fordt\source\repos\MegaTravel\MegaTravelClient\MegaTravelClient\obj\Debug\net6.0\staticwebassets.pack.json
