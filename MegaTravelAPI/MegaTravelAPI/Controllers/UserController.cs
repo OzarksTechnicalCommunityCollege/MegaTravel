@@ -251,7 +251,7 @@ namespace MegaTravelAPI.Controllers
             try
             {
 
-                //call the method that will check the user credentials
+                //call the method
                 var updateResult = await repository.SetTripPaymentStatus(tripID).ConfigureAwait(true);
 
                 if (updateResult.StatusCode == 200)
